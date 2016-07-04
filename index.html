@@ -29,48 +29,50 @@
 
 <p> Unfortunately, due to only being a short project, we did not get the time to create a fully fucntioning editor to work with the engine. However, you can still  use this engine to make your own game, using your own graphics, animations, sprites and scripts! Let's go through gameData.ini first of all. </p>
       
-        <div style="float: left"><img src="gamedata.png" ALT="gameData.ini file located inside BaseGame.zip" width="100" /></div>
+        <section><div><img src="gamedata.png" ALT="gameData.ini file located inside BaseGame.zip"/></div></section>
+
         <div>
-          
-          <h4 style="float: right">General game parameters</h4>
-          <dl style="float: right">
-            <dt>name</dt> <dd>The name you want your game to have!</dd>
-            <dt>texturesUsed</dt> <dd>The number of textures in the /Data/Textures folder</dd>
-            <dt>noOfLevels</dt> <dd>The number of levels you wish your game to have</dd>
-            <dt>playerSpeed</dt> <dd>The walking speed of the player character</dd>
-            <dt>playerRotate</dt> <dd>The rotation speed of the camera/player</dd>
-            <dt>screenWidth</dt> <dd>The width of the game window in pixels</dd>
-            <dt>screenHeight</dt> <dd>The height of the game window in pixels</dd>
-          </dl>
+          <section>
+            <h3 style="float: left">General game parameters</h4>
+            <dl style="float: left">
+              <dt>[Game]</dt> <dd>Tells us these are the general game parameters.</dd>
+              <dt>name</dt> <dd>The name you want your game to have!</dd>
+              <dt>texturesUsed</dt> <dd>The number of textures in the /Data/Textures folder.</dd>
+              <dt>noOfLevels</dt> <dd>The number of levels you wish your game to have.</dd>
+              <dt>playerSpeed</dt> <dd>The walking speed of the player character.</dd>
+              <dt>playerRotate</dt> <dd>The rotation speed of the camera/player.</dd>
+              <dt>screenWidth</dt> <dd>The width of the game window in pixels.</dd>
+              <dt>screenHeight</dt> <dd>The height of the game window in pixels.</dd>
+            </dl>
+          </section>
+          <section>
+            <h3 style="float: left">Level parameters</h4>
+            <dl style="float: left">
+              <dt>[Level1]</dt> <dd>Tells us what level these parameters are for. Add one of these for every level you create.</dd>
+              <dt>texture</dt> <dd>Path of the level .png file. (Explained fully below)</dd>
+              <dt>sprites</dt> <dd>Path of the levels sprites .csv file. (Explained fully below)</dd>
+              <dt>playerX</dt> <dd>The X-coordinate of the players location when they spawn in the level. (32 by default)</dd>
+              <dt>playerY</dt> <dd>The Y-coordinate of the players location when they spawn in the level. (32 by default)</dd>
+              <dt>ceiling</dt> <dd>The texture that you wish the ceiling to be. (Explained fully below)</dd>
+              <dt>floor</dt> <dd>The texture that you wish the ceiling to be. (Explained fully below)</dd>
+            </dl>
+          </section>
+          <section>
+            <h3 style="float: left">Prefab parameters</h4>
+            <dl style="float: left">
+              <dt>[Prefab1]</dt> <dd>A prefab is a set of parameters given to an object in the game. Add one for every object you wish to add.</dd>
+              <dt>baseName</dt> <dd>The name of the object that the prefab parameters will apply to.</dd>
+              <dt>tex</dt> <dd>The texture you wish your object to have if not animated.</dd>
+              <dt>animated</dt> <dd>Can be 'true' or 'false'. True if you wish it to have an animated texture, False if not.</dd>
+              <dt>fps</dt> <dd>The number of times it should update the texture per second.</dd>
+              <dt>animation</dt> <dd>The texture numbers, comma delimited, of the textures in the animation.</dd>
+              <dt>solid</dt> <dd>If 'true', you cannot pass through the object. If false, you can.</dd>
+              <dt>radius</dt> <dd>The radius of the collision box for the object.</dd>
+              <dt>script</dt> <dd>Any scripts you wish to add to the object.</dd>
+              <dt>loadLevel</dt> <dd>Given a level number, it will load that level on collision with the object. If set to 'none', it will not.</dd>
+            </dl>
+          </section>
         </div>
-        <div>
-          <h4 style="float: right">Level parameters</h4>
-          <dl style="float: right">
-            <dt>[Level1]</dt> <dd>Tells us what level these parameters are for. Add one of these for every level you create.</dd>
-            <dt>texture</dt> <dd>Path of the level .png file. (Explained fully below)</dd>
-            <dt>sprites</dt> <dd>Path of the levels sprites .csv file. (Explained fully below)</dd>
-            <dt>playerX</dt> <dd>The X-coordinate of the players location when they spawn in the level. (32 by default)</dd>
-            <dt>playerY</dt> <dd>The Y-coordinate of the players location when they spawn in the level. (32 by default)</dd>
-            <dt>cieling</dt> <dd>The texture that you wish the ceiling to be. (Explained fully below)</dd>
-            <dt>floor</dt> <dd>The texture that you wish the ceiling to be. (Explained fully below)</dd>
-          </dl>
-        </div>
-        <div>
-          <h4 style="float: right">Prefab parameters</h4>
-          <dl style="float: right">
-            <dt>[Prefab1]</dt> <dd>A prefab is a set of parameters given to an object in the game. Add one for every object you wish to add.</dd>
-            <dt>baseName</dt> <dd>The name of the object that the prefab parameters will apply to.</dd>
-            <dt>tex</dt> <dd>The texture you wish your object to have if not animated.</dd>
-            <dt>animated</dt> <dd>Can be 'true' or 'false'. True if you wish it to have an animated texture, False if not.</dd>
-            <dt>fps</dt> <dd>The number of times it should update the texture per second.</dd>
-            <dt>animation</dt> <dd>The texture numbers, comma delimited, of the textures in the animation.</dd>
-            <dt>solid</dt> <dd>If 'true', you cannot pass through the object. If false, you can.</dd>
-            <dt>radius</dt> <dd>The radius of the collision box for the object.</dd>
-            <dt>script</dt> <dd>Any scripts you wish to add to the object.</dd>
-            <dt>loadLevel</dt> <dd>Given a level number, it will load that level on collision with the object. If set to 'none', it will not.</dd>
-          </dl>
-        </div>
-          
       </div>
       </section>
       <footer>
